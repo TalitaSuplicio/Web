@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta  name="author" content="Talita" charset="UTF-8">
+		<title>Jogo da Velha</title>
+</head>
+<style>
+	body{
+			background-color: #D3D3D3;
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+	      }
+	  
+	  
+		#navegacao ul{
+			margin:0;
+			background-color: gray;
+			list-style: none;
+			text-align: block;
+
+		}
+		#navegacao ul li{
+			display: inline;
+
+
+
+		}
+		#navegacao ul li a{
+
+			padding:10px 10px;
+			display:inline-block;
+			color: white;
+			text-decoration: none;
+			font-size: 22px;
+			font-weight: bold;
+
+			
+		}
+		#navegacao ul li a:hover{
+			color: black;
+			
+		}
+
+	      .conteudo{
+				color:var(--corTexto);
+				background-color:var(--corFundo);
+				
+				font-size:20px;
+
+
+			}
+			.teste{ /*Muda o BG*/
+				background-color: black;
+			}
+
+			
+			.conteudo-black{/* classe que mudar o jogo da velha*/
+				--corTexto:white;
+				--corFundo:black;
+			}	
+		
+	.bt-vm {
+			border-color:#86c6f8;
+			background:linear-gradient(to bottom, #86c6f8 5%, #46a7f5 100%);
+			box-shadow:inset 0px 1px 0px 0px #0715e0;
+			text-shadow:0px 1px 0px black; 
+			width:80px;
+			height:33px;
+
+			.bt-vm:hover {
+			background:linear-gradient(to bottom, #f61f0e 5%, #fca8a1 100%);
+			}
+
+
+
+			
+		</style>
+	<body>
+	<div id="navegacao">
+		<ul>
+			<li><a href="index.html">Home</a>
+			<li><a href="jogo.html">Jogar</a>
+			<li><a href="contato.html">Contato</a>
+		</ul>
+	</div>
+	<button class="bt-vm" onclick="teste()">Modo Escuro</button>
+	<div class="conteudo">
+		<br><br>
+<center>
+	<form name="formulario" action=""method=""onSubmit="return ( verifica() )">
+		<p><b>Nome:</b><input type="text" name="nome" size="58"  /></p><br>
+		<br>
+		<p><b>Email:</b><input type=text name="email" size="58" id="email"></p><br>
+		<br>
+		<p><b>Assunto:</b><input type=text name="assunto" size="56"></p><br>
+		<br>
+		<p><b>Mensagem:</b><br>
+		<textarea name="Mensagem" rows="10" cols="60" ></textarea></p><br>
+		<p><input type="submit" value="Enviar Email" id="enviar" onclick="VerificaEmail()">
+			</center>
+</form>
+</body>
+</html>
+
+	</div>
+	<script>/*Script do botão pra mudar as cores*/
+		function teste(){
+			var fundo = document.body
+			fundo.classList.toggle("teste");
+
+			var conteudo = document.getElementsByClassName("conteudo")
+
+			for(let i = 0; i < conteudo.length; i++){
+				conteudo[i].classList.toggle("conteudo-black")
+			}
+		}
+function VerificaEmail(){
+if( document.forms[0].email.value=="" || document.forms[0].email.value.indexOf("@")==-1  || document.forms[0].email.value.indexOf(".")==-1)
+	{
+	  alert( "Por favor, informe um E-MAIL válido!" );
+	  return false;
+	}
+	else{
+		alert( " E-MAIL Enviado!" );
+	}
+}
+
+
+</script>
+
+	
+
+
+	</body>
+</html>

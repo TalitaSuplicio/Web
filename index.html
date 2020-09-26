@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta  name="author" content="Talita" charset="UTF-8">
+		<title>Jogo da Velha</title>
+
+		<style>
+			body{
+				background-color: #D3D3D3;
+			}
+		
+			* {
+			margin: 0;
+			padding: 0;
+			}
+			#navegacao ul{
+			margin:0;
+			background-color: gray;
+			list-style: none;
+			text-align: block;
+
+			}
+			#navegacao ul li{
+				display: inline;
+
+
+
+			}
+			#navegacao ul li a{
+
+				padding:10px 10px;
+				display:inline-block;
+				color: white;
+				text-decoration: none;
+				font-size: 22px;
+				font-weight: bold;
+
+				
+			}
+			#navegacao ul li a:hover{
+				color: black;
+				
+			}
+			.conteudo{
+				color:var(--corTexto);
+				background-color:var(--corFundo);
+				
+				font-size:20px;
+
+
+			}
+			.teste{ /*Muda o BG*/
+				background-color: black;
+			}
+
+			
+			.conteudo-black{/* classe que mudar o jogo da velha*/
+				--corTexto:white;
+				--corFundo:black;
+			}	
+			.navegacao{
+					margin:0;
+					background-color: gray;
+					height:45px;
+				}	
+					.bt-vm {
+					border-color:#86c6f8;
+					background:linear-gradient(to bottom, #86c6f8 5%, #46a7f5 100%);
+					box-shadow:inset 0px 1px 0px 0px #0715e0;
+					text-shadow:0px 1px 0px black; 
+					width:80px;
+					height:33px;
+
+					.bt-vm:hover {
+					background:linear-gradient(to bottom, #f61f0e 5%, #fca8a1 100%);
+					}
+					
+					
+		</style>
+
+	</head>
+	<body>
+	<div id="navegacao">
+		<ul>
+			<li><a href="index.html">Home</a>
+			<li><a href="jogo.html">Jogar</a>
+			<li><a href="contato.html">Contato</a>
+		</ul>
+	</div>
+		<button class="bt-vm" onclick="teste()">Modo Escuro</button>
+		
+		<div class="conteudo">
+
+			<center><h1>Origem do Jogo da Velha</h1></center>
+			<br>
+			<p>A referência mais antiga que se tem desse passatempo surgiu em escavações no templo de Kurna, do século XIV antes de Cristo, no Egito. Achados arqueológicos, porém, mostram que ele foi desenvolvido independentemente em diferentes regiões do planeta, como a China antiga e a América pré-colombiana. Sabe-se também que faz parte dos jogos conhecidos como “família do moinho” ou “trilha” – nos quais o objetivo é posicionar as peças de modo que formem uma linha reta. Há também versões em que variam os números de linhas e colunas, geralmente três ou cinco. Conhecido praticamente em todo o mundo, o jogo varia de nome conforme a região. Na China de 500 a.C., era conhecido como luk isut k-i. Nos países de língua inglesa, chama-se tic-tac-toe.</p>
+
+			<center><h1>Regras do Jogo</h1></center>
+			<p>Em suma, dois jogadores escolhem dois símbolo com que querem jogar. Normalmente é usado as letras X e O.  O material do jogo é um tabuleiro,
+			 que pode ser desenhado, com três linhas e três colunas. Os espaços em branco dessas linhas e colunas serão preenchidos com os símbolos escolhidos.O objetivo desse passatempo é preencher ou as linhas diagonais ou as horizontais ou as verticais com um mesmo símbolo (X ou O) e impedir que seu adversário faço isso primeiro que você.</p>
+			<center><img src="imagens/tabu.jpg" border="0" width="450" height="450"></center>
+			</div>
+
+
+		<script>/*Script do botão pra mudar as cores*/
+		function teste(){
+			var fundo = document.body
+			fundo.classList.toggle("teste");
+
+			var conteudo = document.getElementsByClassName("conteudo")
+
+			for(let i = 0; i < conteudo.length; i++){
+				conteudo[i].classList.toggle("conteudo-black")
+			}
+		}
+	</script>
+		
+
+
+	</body>
+	</html>

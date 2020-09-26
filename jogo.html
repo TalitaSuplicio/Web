@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta  name="author" content="Talita" charset="UTF-8">
+		<title>Jogo da Velha</title>
+		<style>
+			body{
+				background-color: #D3D3D3;
+			}
+		
+			* {
+			margin: 0;
+			padding: 0;
+			}
+			#navegacao ul{
+			margin:0;
+			background-color: gray;
+			list-style: none;
+			text-align: block;
+
+			}
+			#navegacao ul li{
+				display: inline;
+
+
+
+			}
+			#navegacao ul li a{
+
+				padding:10px 10px;
+				display:inline-block;
+				color: white;
+				text-decoration: none;
+				font-size: 22px;
+				font-weight: bold;
+
+				
+			}
+			#navegacao ul li a:hover{
+				color: black;
+				
+			}
+
+			.teste{ /*Muda o BG*/
+				background-color: black;
+			}
+
+			
+			.conteudo{
+				color:var(--corTexto);
+				background-color:var(--corFundo);
+
+			}
+			.conteudo{
+				width:100%;
+			height: 100%;
+			}
+			.conteudo-black{/* classe que mudar o jogo da velha*/
+				--corTexto:white;
+				--corFundo:black;
+			}	
+			#MudaTema{
+				margin-bottom:0px;
+			}	
+				#inicio{
+					margin:auto;
+					margin-top:40px;
+					margin-bottom:30px;
+					width:250px;
+					height:80px;
+					
+				}
+				.item{
+					width:80px;
+					height:60px;
+					float:left;
+					text-align:center;
+					padding-top:20px;
+					border:2px solid ;
+				
+				}
+				.tabuleiro{
+					width:252px;
+					height:252px;
+					margin:auto;
+					
+				}
+				.menu{
+					margin: 0;
+					background-color: gray;
+					
+				}
+				.bt-vm {
+					border-color:#86c6f8;
+					background:linear-gradient(to bottom, #86c6f8 5%, #46a7f5 100%);
+					box-shadow:inset 0px 1px 0px 0px #0715e0;
+					
+					text-shadow:0px 1px 0px black;  
+					.bt-vm:hover {
+					background:linear-gradient(to bottom, #f61f0e 5%, #fca8a1 100%);
+					}
+									
+				
+			
+
+		</style>
+	</head>
+
+<body>
+<div id="navegacao">
+	<ul>
+		<li><a href="index.html">Home</a>
+		<li><a href="jogo.html">Jogar</a>
+		<li><a href="contato.html">Contato</a>
+	</ul>
+</div>
+<!--<input type="checkbox" name="Modo Escuro" id="MudarTema"/>-->
+<button class="bt-vm" onclick="teste()">Modo Escuro</button>
+<div class="conteudo" width="100%">
+	<div id="inicio" >
+		<p style="float:left;margin-right:10px;" >Vez do Jogador: </p>
+		<img src="" border="0" width="50" height="50">	
+	</div>
+	<div class="tabuleiro">
+		<div id="p1" class="item" jogada=""></div>
+		<div id="p2" class="item" jogada=""></div>
+		<div id="p3" class="item" jogada=""></div>
+
+		<div id="p4" class="item" jogada=""></div>
+		<div id="p5" class="item" jogada=""></div>
+		<div id="p6" class="item" jogada=""></div>
+
+		<div id="p7" class="item" jogada=""></div>
+		<div id="p8" class="item" jogada=""></div>
+		<div id="p9" class="item" jogada=""></div>
+	</div>
+
+</div>
+	<script type="text/javascript" src="jdv.js"></script>
+
+	<script>/*Script do botão pra mudar as cores*/
+		function teste(){
+			var fundo = document.body
+			fundo.classList.toggle("teste");
+
+			var conteudo = document.getElementsByClassName("conteudo")
+
+			for(let i = 0; i < conteudo.length; i++){
+				conteudo[i].classList.toggle("conteudo-black")
+			}
+		}
+	</script>
+</body>
+</html>
